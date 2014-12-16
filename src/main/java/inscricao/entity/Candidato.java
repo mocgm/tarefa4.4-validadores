@@ -16,6 +16,7 @@ public class Candidato implements Serializable {
     private String cpf;
     private String rg;
     @Size(min=3, max=50)
+    @Pattern(regexp="\\S\\D+\\s\\S\\D+")
     private String nome;
     private String instituicao;
     private String programa;
@@ -26,7 +27,7 @@ public class Candidato implements Serializable {
     private Integer cep;
     private String fone;
     private String celular;
-    @Pattern(regexp="^.*\\w@.*\\w$")
+    @Pattern(regexp=".+@.+")
     private String email;
     private Idioma idioma;
     private Date dataHora;
